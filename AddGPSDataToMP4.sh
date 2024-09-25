@@ -3,12 +3,12 @@
 #================================================================================
 # Script name:     AddGPSDataToMP4.sh
 # Description:     This script adds GPS metadata to mp4-files
-# Call:            ./AddGPSDataToMP4.sh <pathToVideoDirectory>
-# Input parameter: <pathToVideoDirectory>: Path to the video and text files
+# Call:            ./AddGPSDataToMP4.sh /d/path/to/videos
+# Input parameter: <pathToVideoDirectory>: Path to the video and text files 
 # Author:          Yoschi95
 #================================================================================
 
-# Store passed arguments
+# Save passed arguments
 pathToVideoDirectory=$1
 
 # Print found MP4 files
@@ -21,7 +21,7 @@ numberOfGPSDataFiles=$(find $pathToVideoDirectory -maxdepth 1 -type f \( -iname 
 echo "found $numberOfGPSDataFiles .SRT and .txt file(s)"  
 echo ""
 
-# For Loop over all videos
+# Iterate over all .SRT and .txt files
 for file in "$pathToVideoDirectory"/*.{SRT,txt}; do
 
     if [[ -f "$file" ]]; then
