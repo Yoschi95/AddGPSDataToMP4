@@ -2,7 +2,7 @@
 
 ## Description
 
-This script reads GPS data from a .txt or .SRV file and copies it to the metada of the corresponding mp4 file. Please make sure to save the video and the data file in the same directory. Both must have the same name!
+This script reads GPS data from a .txt or .SRV file and copies it to the metadata of the corresponding .mp4 file. Please make sure to save the video and the data file in the same directory. Both must have the same name!
 
 ## Installation
 
