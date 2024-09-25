@@ -1,2 +1,45 @@
 # AddGPSDataToMP4
-This script adds GPS metadata to mp4-files
+
+## Description
+
+This script reads GPS data from a .txt or .SRV file and copies it to the metada of the corresponding mp4 file. Please make sure to save the video and the data file in the same directory. Both must have the same name!
+
+## Installation
+
+1. Download ExifTool (v12.97) and move it to your PATH:
+   ```bash
+   https://exiftool.org/exiftool-12.97_64.zip
+   ```
+
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/Yoschi95/AddGPSDataToMP4.git
+   ```
+
+3. Navigate to the source directory of the repository:
+   ```bash
+   cd AddGPSDataToMP4/src
+   ```
+
+## Usage
+
+1. Call the script:
+   ```bash
+   ./AddGPSDataToMP4.sh /path/to/your/videos
+   ```
+
+## Example
+
+![Example CLI output](img/example.png)
+
+## Contributing
+
+Contributions are welcome! Please open an [Issue](https://github.com/Yoschi95/AddGPSDataToMP4/issues) or submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Credits
+
+- [ExifTool v12.97](https://https://exiftool.org/) - A platform-independent Perl library plus a command-line application for reading, writing and editing meta information.
