@@ -4,6 +4,15 @@
 
 This script reads GPS data from a .txt or .SRV file and copies it to the metadata of the corresponding .mp4 file. Please make sure to save the video and the data file in the same directory. Both must have the same name!
 
+Convention: 
+   - /path/to/your/videos/nameOfVideo.mp4
+   - /path/to/your/videos/nameOfVideo.txt
+   - The GPS data has to be saved as the following pattern:
+   ```bash
+   [latitude: 62.471811] [longitude: 23.388790] [rel_alt: 0.000 abs_alt: 117.393]
+   ```
+
+
 ## Installation
 
 1. Download ExifTool (v12.97) and move it to your PATH, as described in the installation guide on the homepage of Exiftool:
