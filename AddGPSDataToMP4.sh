@@ -54,7 +54,7 @@ for file in "$pathToVideoDirectory"/*.{SRT,txt}; do
 
         # Set GPS data to .mp4 file
         echo "Writing GPS data to $fileNameWithoutType.mp4"
-        exiftool -e -overwrite_original -Keys:GPSCoordinates="$GPSLatitude, $GPSLongitude, $GPSAltitude" $pathToVideoDirectory/$fileNameWithoutType.mp4
+        exiftool -overwrite_original -Keys:GPSCoordinates="$GPSLatitude, $GPSLongitude, $GPSAltitude" $pathToVideoDirectory/$fileNameWithoutType.mp4
 
         echo ""
     fi
