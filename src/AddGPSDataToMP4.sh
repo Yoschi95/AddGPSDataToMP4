@@ -31,21 +31,21 @@ for file in "$pathToVideoDirectory"/*.{SRT,txt}; do
         echo "Parsing GPS data from $fileNameWithType"
 
         # Parse GPS location and save in vars
-        GPSLatitude=$(grep -Po -m 1 "(?<=latitude: )\d+\.\d+" $file)
+        GPSLatitude=$(grep -Po -m 1 "(?<=latitude: )(-|)(\d+\.\d+)" $file)
         if [ -z "$GPSLatitude" ]; then
             echo "No GPS latitude found. Nothing to do."
             continue
         fi
         echo "GPSLatitude: $GPSLatitude"
 
-        GPSLongitude=$(grep -Po -m 1 "(?<=longitude: )\d+\.\d+" $file)
+        GPSLongitude=$(grep -Po -m 1 "(?<=longitude: )(-|)(\d+\.\d+)" $file)
         if [ -z "$GPSLongitude" ]; then
             echo "No GPS longitude found. Nothing to do."
             continue
         fi
         echo "GPSLongitude: $GPSLongitude"
 
-        GPSAltitude=$(grep -Po -m 1 "(?<=abs_alt: )\d+\.\d+" $file)
+        GPSAltitude=$(grep -Po -m 1 "(?<=abs_alt: )(-|)(\d+\.\d+)" $file)
         if [ -z "$GPSAltitude" ]; then
             echo "Warning: No GPS altitude found."
         else
